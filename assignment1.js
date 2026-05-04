@@ -34,7 +34,6 @@ let today = new Date();
 
 console.log(today.toLocaleString("en-US"));
 console.log(today.toLocaleString("en-PK"));
-console.log(today.toLocaleString("de-DE"));
 
 console.log(today.toISOString());
 
