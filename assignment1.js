@@ -6,10 +6,11 @@ let height1 = Number(prompt("Enter person1 height in meters):"));
 
 //person2 input values
 let mass2 = Number(prompt("Enter person2 mass:"));
+// const mass2= 12;
 let height2 = Number(prompt("Enter person2 height in meters):"));
 
 //BMI Calculation
-let bmi1 = (mass1/(height1*height1));
+let bmi1 = (mass1/(height1**2));
 let bmi2 = (mass2/(height2*height2));
 
 // boolean flag
