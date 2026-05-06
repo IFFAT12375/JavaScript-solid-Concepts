@@ -20,7 +20,7 @@ let markHigherBMI = bmi1 > bmi2;
 console.log("Is Person 1 BMI higher?", markHigherBMI);
 
 if(markHigherBMI){
-    console.log(`Person 1(${bmi1}) has higher BMI: `);
+    console.log(`Person 1(${bmi1.toFixed(2)}) has higher BMI: `);
 } else if (bmi2 > bmi1) {
     console.log("Person 2 has higher BMI:", bmi2.toFixed(2));
 } else {
