@@ -28,7 +28,7 @@ let winnerKoalas = averageKoalas > averageDolphin;
 if((averageDolphin > averageKoalas) && (averageDolphin >= minScore)){
    // Condition 1: Dolphins win only if higher AND they hit 100+
     console.log("🏆 Dolphins win the trophy!");
-} else if(winnerKoalas && (averageKoalas >= minScore)){
+} else if(winnerKoalas && (averageKoalas >= 100)){
  // Condition 2: Koalas win only if higher AND they hit 100+
     console.log("🏆 Koalas win the trophy!");
 } else if((averageDolphin === averageKoalas) && (averageDolphin >= minScore) && (averageKoalas >= minScore)){
