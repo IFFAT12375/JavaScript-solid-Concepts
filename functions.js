@@ -25,3 +25,25 @@ const age2 = calculateAgeExpression(1999);
 //function output
 console.log(`Age calculated using function declaration: ${age1}`);
 console.log(`Age calculated using function expression: ${age2}`);
+
+
+// --- coding challenge 1 ---
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+const avgDolphins = calcAverage(12, 11, 10);
+const avgKoalas = calcAverage(8, 7, 6);
+
+console.log(avgDolphins, avgKoalas);
+
+function checkWinner (avgDolphins, avgKoalas) {
+if (avgDolphins > 2 * avgKoalas) {
+   console.log(`Dolphins win ${avgDolphins} vs. ${avgKoalas}`);
+} else if (avgKoalas >= 2* avgDolphins){
+   console.log(`Koalas win ${avgKoalas} vs. ${avgDolphins}`);
+} else {
+   console.log("no one is winner");
+}
+}
+
+checkWinner(avgDolphins, avgKoalas);
