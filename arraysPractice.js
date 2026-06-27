@@ -110,22 +110,24 @@ const calcAverage = function (arr) {
 
 console.log(calcAverage(totals));
 
-
 /* ----------------- method 2 using modern syntax ------------------- */
 
-const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+const calcTip = (bill) =>
+  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
 const bills = [22, 1234, 345, 345, 756, 987];
 
 // .map() creates a new array by transforming each element
-const tips = bills.map(bill => Number(calcTip(bill).toFixed(2)));
-const totals = bills.map((bill, index) => Number((bill + tips[index]).toFixed(2)));
+const tips = bills.map((bill) => Number(calcTip(bill).toFixed(2)));
+const totals = bills.map((bill, index) =>
+  Number((bill + tips[index]).toFixed(2)),
+);
 
 // .reduce() accumulates all values into a single sum
-const calcAverage = arr => Number((arr.reduce((sum, val) => sum + val, 0) / arr.length).toFixed(2));
+const calcAverage = (arr) =>
+  Number((arr.reduce((sum, val) => sum + val, 0) / arr.length).toFixed(2));
 
 console.log("Bills:", bills);
 console.log("Tips:", tips);
 console.log("Totals:", totals);
 console.log("Average Total:", calcAverage(totals));
-

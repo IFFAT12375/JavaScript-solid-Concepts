@@ -33,7 +33,7 @@ const tom = {
   },
 };
 
-console.log(tom);
+console.log(tom['getSummary']()); //using bracket notation
 
 // method 1
 // console.log(tom.calcAge(1999)); //using dot notation
