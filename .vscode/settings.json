@@ -1,0 +1,23 @@
+{
+    "sqltools.connections": [
+        {
+            "connectionTimeout": 15,
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": false,
+                "trustServerCertificate": false,
+                "tdsVersion": "7_4"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 1433,
+            "driver": "MSSQL",
+            "name": "SQLPractice",
+            "database": "master",
+            "username": "sa",
+            "password": "SqlServer@2025"
+        }
+    ]
+}
