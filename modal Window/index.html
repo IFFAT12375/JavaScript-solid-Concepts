@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Window</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <button class="show-modal">Show Modal 1</button>
+    <button class="show-modal">Show Modal 2</button>
+    <button class="show-modal">Show Modal 3</button>
+
+    <!-- Overlay -->
+    <div class="overlay hidden"></div>
+
+    <!-- Modal -->
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+
+      <h1>Welcome 👋</h1>
+
+      <p>
+        This is a simple modal window. Initially it is hidden using the
+        <strong>hidden</strong> class. JavaScript will remove the hidden class
+        whenever a user clicks one of the buttons.
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

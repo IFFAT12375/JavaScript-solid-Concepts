@@ -1,0 +1,98 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #4caf50, #8bc34a);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Buttons */
+
+.show-modal {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+  font-size: 18px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.show-modal:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+
+.modal {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 550px;
+  padding: 35px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+
+  z-index: 10;
+}
+
+/* Close Button */
+
+.close-modal {
+  position: absolute;
+
+  top: 10px;
+  right: 20px;
+
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  font-size: 30px;
+}
+
+/* Overlay */
+
+.overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  backdrop-filter: blur(3px);
+
+  z-index: 5;
+}
+
+/* Hidden Class */
+
+.hidden {
+  display: none;
+}
