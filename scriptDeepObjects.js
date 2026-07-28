@@ -75,19 +75,21 @@ const resturant = {
    }
 };
 
-const ingredient = [prompt('let\'s make pasta, ingredient 1?'), prompt('ingredient 2?'), prompt('ingredient 3?')];
+const {name, ...info} = resturant;
+console.log(info);
+// const ingredient = [prompt('let\'s make pasta, ingredient 1?'), prompt('ingredient 2?'), prompt('ingredient 3?')];
 
 // use spread operator to pass value to a function as an argument
-console.log(resturant.orderPasta(...ingredient));
+// console.log(resturant.orderPasta(...ingredient));
 
 // use spread operator to create an array as well specially string
-const str = 'iff';
-console.log(...str);
+// const str = 'iff';
+// console.log(...str);
 
 
-// Rest with Array Destructuring
-const [fav, secondFav, ...others] = resturant.categories;
+// // Rest with Array Destructuring
+// const [fav, secondFav, ...others] = resturant.categories;
 
-console.log(fav);       // 'Italian'
-console.log(secondFav); // 'pizarani'
-console.log(others);    // ['organic'] -> A brand new array box!
+// console.log(fav);       // 'Italian'
+// console.log(secondFav); // 'pizarani'
+// console.log(others);    // ['organic'] -> A brand new array box!
