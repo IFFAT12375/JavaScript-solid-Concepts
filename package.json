@@ -1,0 +1,29 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arraysPractice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --env-file=.env recursion.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IFFAT12375/JavaScript-solid-Concepts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/IFFAT12375/JavaScript-solid-Concepts/issues"
+  },
+  "homepage": "https://github.com/IFFAT12375/JavaScript-solid-Concepts#readme",
+  "devDependencies": {
+    "prettier": "^3.9.5"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.14",
+    "prompt-sync": "^4.2.0"
+  }
+}
