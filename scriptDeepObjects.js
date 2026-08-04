@@ -59,8 +59,9 @@ const arr = [1,2,3]
 const done=Object.entries(arr);
 const values=Object.values(arr)
 const keys=Object.keys(arr)
-    console.log(done);
     console.log(Object.entries(arr));
+    console.log(...arr.entries());
+     console.log(arr.entries().next());
     console.log(values);
     console.log(keys);
 
@@ -85,7 +86,11 @@ const resturant = {
     return `pasta is delicious made of ${ing1}, & ${ing}`
    }
 };
-
+console.log(Object.getOwnPropertyDescriptor(resturant, "name"));
+console.log(
+  resturant.propertyIsEnumerable("name")
+);
+console.log([...resturant]);
 console.log(Object.entries(resturant));
 console.log(Object.keys(resturant));
 console.log(Object.values(resturant));
