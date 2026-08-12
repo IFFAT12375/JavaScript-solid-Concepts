@@ -45,6 +45,9 @@ transformer('iffat', upperFirstWord);
 
 
 // ========================================= call/apply method =======================================
+//manually set this keyword poinging to which fun/obj and call imediately
+//apply is old technique
+//call/apply return result of function
 
 const swiss = {
     airline: 'swiss airline',
@@ -71,13 +74,53 @@ const airCanada = {
 
 const book = swiss.book;
 
-book.call(airCanada, 'tom', 25);
+book.call(airCanada, 'tom', 25); //call it immediately
 console.log(airCanada);
 
 const data = ['duby', 30] 
-book.apply(airCanada, data);
+book.apply(airCanada, data); //call it immediately
 
 // or
 book.apply(airCanada, [...data]);
 
 console.log(airCanada);
+
+// ========================================= bind method =======================================
+// bind() does not execute the original function. It creates and returns a new function with this and optionally some arguments pre-set. The remaining arguments are supplied when you later call the new function.
+//doesnt call immediately so can set argument later and even immediately as well whenever we want to call it.
+
+const person = {
+  name: 'Iffat'
+};
+
+function greet(greeting) {
+  console.log(`${greeting}, ${this.name}`);
+}
+
+const greetIffat = greet.bind(person);
+
+greetIffat('Hello');
+
+//partial application
+function multiply(a, b) {
+  return a * b;
+}
+
+const double = multiply.bind(null, 2); //a=2 //return another function
+
+console.log(double(5)); //b=5 //now it execute it while simple function immediately called
+
+//bind returns another function
+
+//Pre-set both this AND an argument
+function book(name, flightNumber) {
+  console.log(
+    `${name} booked ${this.iataCode}${flightNumber} at ${this.airline}`
+  );
+}
+
+const swissBook = book.bind(swiss);
+swissBook('Iffat', 23);
+
+const iffatsSwissBook = book.bind(swiss, 'Iffat'); //const newFunction = originalFunction.bind(thisValue, arg1, arg2);
+iffatsSwissBook(23);
