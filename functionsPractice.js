@@ -113,14 +113,44 @@ console.log(double(5)); //b=5 //now it execute it while simple function immediat
 //bind returns another function
 
 //Pre-set both this AND an argument
-function book(name, flightNumber) {
-  console.log(
-    `${name} booked ${this.iataCode}${flightNumber} at ${this.airline}`
-  );
-}
+// function book(name, flightNumber) {
+//   console.log(
+//     `${name} booked ${this.iataCode}${flightNumber} at ${this.airline}`
+//   );
+// }
 
 const swissBook = book.bind(swiss);
 swissBook('Iffat', 23);
 
 const iffatsSwissBook = book.bind(swiss, 'Iffat'); //const newFunction = originalFunction.bind(thisValue, arg1, arg2);
 iffatsSwissBook(23);
+
+// =====================================closures ==========================
+
+let f;
+
+const g = function () {
+    const a = 23;
+
+    f = function () {
+        console.log(a * 2);
+    };
+};
+
+const h = function () {
+    const b = 777;
+
+    f = function () {
+        console.log(b * 2);
+    };
+};
+
+console.log(g());
+console.log(f());
+// console.dir(f);
+
+h();
+console.log(h());
+f();
+console.log(f());
+// console.dir(f);
