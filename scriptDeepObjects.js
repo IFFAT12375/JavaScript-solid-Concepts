@@ -90,7 +90,7 @@ console.log(Object.getOwnPropertyDescriptor(resturant, "name"));
 console.log(
   resturant.propertyIsEnumerable("name")
 );
-console.log([...resturant]);
+console.log({...resturant});
 console.log(Object.entries(resturant));
 console.log(Object.keys(resturant));
 console.log(Object.values(resturant));
