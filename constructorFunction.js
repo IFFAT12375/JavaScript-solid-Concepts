@@ -129,19 +129,19 @@ class Person {
     this.fullName = fullName;
   }
 
-  set name(name) {
-    if (name.includes(' ')) {
-      this._fullName = name;
+  set fullName(fullName) {
+    if (fullName.includes('')) {
+      this._fullName = fullName;
     } else {
       console.log('Please provide first and last name');
     }
   }
 
-  get name() {
+  get fullName() {
     return this._fullName;
   }
 }
 
-const p = new Person('Iffat Sattar');
+const p = new Person('Iffat sattar');
 
 console.log(p.fullName);
